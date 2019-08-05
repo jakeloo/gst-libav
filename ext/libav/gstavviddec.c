@@ -133,9 +133,11 @@ gst_ffmpegviddec_skipframe_get_type (void)
   if (!ffmpegdec_skipframe_type) {
     static const GEnumValue ffmpegdec_skipframe[] = {
       {0, "0", "Skip nothing"},
-      {1, "1", "Skip B-frames"},
-      {2, "2", "Skip IDCT/Dequantization"},
-      {5, "5", "Skip everything"},
+      {8, "8", "Skip non reference"},
+      {16, "16", "Skip B-frames"},
+      {24, "24", "Skip non intra"},
+      {32, "32", "Skip non keyframe"},
+      {48, "48", "Skip everything"},
       {0, NULL, NULL},
     };
 
